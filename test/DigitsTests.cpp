@@ -19,7 +19,7 @@ protected:
 
 TEST_F(DigitTests, positions)
 {
-	EXPECT_EQ(0, fibdigit.getcount());
+	EXPECT_EQ(0, fibdigit.getpositions());
 }
 
 TEST_F(DigitTests, length)
@@ -28,7 +28,10 @@ TEST_F(DigitTests, length)
 	EXPECT_EQ(1023, fibdigit.getlength());
 
 	fibdigit.genFibonacciSeq();
-	EXPECT_EQ(17, fibdigit.getcount());
+	EXPECT_EQ(17, fibdigit.getpositions());
+
+	EXPECT_EQ(31, fibdigit.getcount());
+
 }
 
 }
